@@ -1,0 +1,1 @@
+This project implements a combined encryption tool using Caesar and Affine ciphers. The tool performs encryption in a sequential manner: first applying Caesar cipher encryption and then encrypting the result with the Affine cipher. This approach showcases how combining classical cryptographic techniques can add complexity and enhance security.
