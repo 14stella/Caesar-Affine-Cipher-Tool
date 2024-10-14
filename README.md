@@ -3,13 +3,19 @@ This project implements a combined encryption tool using Caesar and Affine ciphe
 How It Works
 Caesar Cipher Encryption:
 
-Shifts each letter in the plaintext by a specified number of positions.
-Non-alphabetic characters remain unchanged.
-Affine Cipher Encryption:Affine Cipher Encryption:
+1. Caesar Cipher: 
+   - Shifts each letter in the plaintext by a specified number of positions.
+   - Non-alphabetic characters are not modified.
+2. Affine Cipher:
+   - Applies the formula (a * x + b) % 26  to each letter, where `a` and `b` are user-defined keys.
+   - Ensures that `a` is coprime with 26 to guarantee that decryption is possible.
 
-Applies the formula(a*x+b)mod26 to each letter of the text.
-Uses the result from the Caesar cipher encryption as input.
 Validation:
-
 Checks if the key 'a' for the Affine cipher is coprime with 26 to ensure proper decryption.
 Validates Caesar cipher shift key to be within the range [0-25].
+
+ Features
+
+- Flexible Input: Supports both uppercase and lowercase letters, while leaving non-alphabetic characters unchanged.
+- User-Defined Keys: Allows the user to input their own keys for both ciphers.
+- Key Validation: Ensures the affine `a` key is coprime with 26 before proceeding with encryption.
